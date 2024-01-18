@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "test2_backend": {
+      "candid": "src/test2_backend/test2_backend.did",
+      "package": "test2_backend",
+      "type": "rust"
+    },
+    "test2_frontend": {
+      "dependencies": [
+        "test2_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/test2_frontend/src/index.html"
+      },
+      "source": [
+        "src/test2_frontend/assets",
+        "dist/test2_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
