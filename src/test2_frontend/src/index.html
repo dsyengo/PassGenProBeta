@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>test2</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
-  </body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="../assets/main.css" />
+      <title>Password Manager</title>
+   </head>
+   <body>
+      <div class="container">
+         <img src="../assets/logo.png" alt="lock-img" />
+         <h1>Password Manager</h1>
+
+         <label for="website">Website:</label>
+         <input
+            type="text"
+            id="website"
+            name="website"
+            placeholder="Website" /><br />
+         <label for="email">Email/Username:</label>
+         <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email/Username" /><br />
+         <button onclick="generatePassword()">Generate Password</button><br />
+         <label for="password">Password:</label>
+         <input
+            type="text"
+            id="password"
+            name="password"
+            placeholder="Password" /><br />
+         <button onclick="savePassword()">Save</button>
+         <button onclick="findPassword()">Find Password</button>
+      </div>
+      <script src="../src/index.js"></script>
+      <!-- <script type="module">
+         import init from '../../password_manager';
+         init(); -->
+      <!-- </script> -->
+   </body>
 </html>
